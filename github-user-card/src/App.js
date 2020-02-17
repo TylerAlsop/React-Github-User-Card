@@ -20,7 +20,7 @@ class App extends React.Component {
       .get("https://api.github.com/users/TylerAlsop")
       .then(res => {
         console.log("This is the API Data:", res)
-        this.setState({ userInfo: res })
+        this.setState({ userInfo: res.data })
       })
       .catch(err => console.log("Error with axios call", err))
 
@@ -37,7 +37,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <div>Here's To The Start Of A New App</div>
-            {/* <UserCard userInfo={this.state.userInfo} /> */}
+            <UserCard userInfo={this.state.userInfo} />
         </header>
       </div>
     );

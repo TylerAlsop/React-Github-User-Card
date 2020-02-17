@@ -4,9 +4,12 @@ const UserCard = props => {
 
     return (
         <div className="user-card">
-            <img src={props.userInfo.data.avatar_url} alt="Users Picture or Avatar" />
-            <p className="user-name">{props.userInfo.data.name}</p>
-            <p>{props.userInfo.data.followers}</p>
+            <img src={props.userInfo.avatar_url} alt="Users Picture or Avatar" />
+            <div className="name-and-followers">
+                <h1 className="user-name">{props.userInfo.name}</h1>
+                <h2>Number of Followers: {props.userInfo.followers}</h2>
+            </div>
+            
         </div>
     );
 };
