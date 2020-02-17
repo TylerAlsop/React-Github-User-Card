@@ -35,10 +35,8 @@ class App extends React.Component {
     console.log("this.state", this.state)
     return (
       <div className="App">
-        <header className="App-header">
-          <div>Here's To The Start Of A New App</div>
-            <UserCard userInfo={this.state.userInfo} />
-        </header>
+        <h1>GitHub User: {this.state.userInfo.name}</h1>
+        <UserCard userInfo={this.state.userInfo} />
       </div>
     );
   }
