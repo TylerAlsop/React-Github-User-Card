@@ -1,7 +1,7 @@
 import React from 'react';
 import UserCard from "./user-card";
 
-const Users = props => {
+const User = props => {
     return (
         <div>
             <UserCard key={props.user.id} />
@@ -9,4 +9,4 @@ const Users = props => {
     )
 }
 
-export default Users
+export default User
