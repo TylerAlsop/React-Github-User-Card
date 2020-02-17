@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 
-import User from './components/user';
+import UserCard from './components/user-card';
 
 import './App.css';
 
@@ -32,16 +32,12 @@ class App extends React.Component {
   }
 
   render () {
+    console.log("this.state", this.state)
     return (
       <div className="App">
         <header className="App-header">
           <div>Here's To The Start Of A New App</div>
-            {/* <User 
-              key={this.state.userInfo.data.id} 
-              name={this.state.userInfo.data.name}
-              picture={this.state.userInfo.data.avatar_url}
-              followers={this.state.userInfo.data.followers}
-            /> */}
+            {/* <UserCard userInfo={this.state.userInfo} /> */}
         </header>
       </div>
     );
