@@ -88,5 +88,3 @@ Overall: This seemed to be a pretty straight forward project and I enjoyed learn
 Planning: I originally though that the API call would return info for more than one user and so I planned on having a User component and a UserCard component. After realizing that I was only getting data for my own GitHub user account I realized that I only needed a UserCard component and ended up deleting the User component.
 
 Blockers: My main blocker turned out to be a small bit of code missing from my setState( ). I simply needed to go one level deeper and add a .data. After that everything rendered to the screen and I could start styling.
-
-Other: I'm not sure how necessary Step 3 is when "followers" is already accessible from the original GET request which is already set to state. Doesn't seem to be very DRY.
