@@ -9,7 +9,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      userInfo: []
+      userInfo: [],
+      followerInfo: []
     };
   }
 
@@ -24,7 +25,17 @@ class App extends React.Component {
       })
       .catch(err => console.log("Error with axios call", err))
 
+    axios
+    .get("https://api.github.com/users/TylerAlsop/followers")
+    .then(res => {
+      console.log("This is the API Data:", res)
+      this.setState({ followerInfo: res.data })
+    })
+    .catch(err => console.log("Error with axios call", err))
+
   }
+
+  
 
   componentDidUpdate(prevProps, prevState) {
     console.log("Component Updated. This is the new state:", this.state)
@@ -36,7 +47,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>GitHub User: {this.state.userInfo.name}</h1>
-        <UserCard userInfo={this.state.userInfo} />
+        <UserCard userInfo={this.state.userInfo} followerInfo={this.state.followerInfo} />
       </div>
     );
   }

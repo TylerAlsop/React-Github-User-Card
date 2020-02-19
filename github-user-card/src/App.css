@@ -37,3 +37,8 @@
     transform: rotate(360deg);
   }
 }
+
+.follower-card {
+  width: 75vw;
+  border: solid white 1px;
+}
