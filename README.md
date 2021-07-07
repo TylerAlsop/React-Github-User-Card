@@ -76,3 +76,15 @@ After finishing your required elements, you can push your work further. These go
 - Build a form that allows you to search for different Github users. When the form is submitted, use `componentDidUpdate` to fetch the data for the user you typed in. Set that new user's data to state to trigger the component to rerender and display your new user. Don't forget to fetch their followers as well.
 
 - Look into adding your GitHub contribution graph. There are a number of different ways of doing this, this Stack Overflow discussion will get you started: https://stackoverflow.com/questions/34516592/embed-github-contributions-graph-in-website
+
+
+
+###### ########################## RETROSPECTIVE ########################## ######
+
+My retrospective:
+
+Overall: This seemed to be a pretty straight forward project and I enjoyed learned about the data flow. It helped me to understand several concepts that have been mentioned in the past.
+
+Planning: I originally though that the API call would return info for more than one user and so I planned on having a User component and a UserCard component. After realizing that I was only getting data for my own GitHub user account I realized that I only needed a UserCard component and ended up deleting the User component.
+
+Blockers: My main blocker turned out to be a small bit of code missing from my setState( ). I simply needed to go one level deeper and add a .data. After that everything rendered to the screen and I could start styling.
